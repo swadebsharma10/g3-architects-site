@@ -8,6 +8,16 @@
   font-family: "Work Sans", sans-serif;
 }
 
+.text-gray {
+  color: #727272;
+}
+.common-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #131313;
+  margin-bottom: 24px;
+}
+
 /* Header style */
 
 header {
@@ -69,39 +79,104 @@ nav li a {
 }
 
 /* main styles */
-main{
-    max-width: 1440px;
-    margin: 70px auto;
+main {
+  max-width: 1440px;
+  margin: 70px auto;
 }
 
-.features-container{
+.features-container {
+  display: flex;
+  align-items: center;
+}
+.teams-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.features-content {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.feature-title {
+  font-size: 2.8rem;
+}
+.feature-description {
+  color: #727272;
+  margin: 10px 0;
+}
+.feature-title .qiuck-list {
+  color: #727272;
+  font-weight: 500;
+}
+.feature {
+  color: #ff900e;
+  font-weight: 700;
+}
+
+/* facts style */
+.facts {
+  margin-top: 100px;
+  margin-bottom: 120px;
+}
+.facts-content{
+    margin-bottom: 100px;
+}
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.facts-card-container .card {
+  border-radius: 8px;
+  border: 1px solid #ff900e;
+  text-align: center;
+  padding: 30px 30px;
+  
+}
+.facts-card-container .card-title{
+    font-weight: 600;
+    color: #727272;
+}
+.facts-card-container .cart-stats{
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* sponsor styles here */
+
+.sponsor-heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.sponsor-img-container img{
+    width: 150px;
+    height: 50px;
+}
+.sponsor-img-container{
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    gap: 20px;
 }
-.teams-img-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
-.features-content{
-    padding-left: 70px;
-    padding-right: 70px;
-}
-.feature-title{
-    font-size: 2.8rem;
-}
-.feature-description{
-    color: #727272;
-    margin: 10px 0;
-}
-.feature-title .qiuck-list{
-    color: #727272;
-    font-weight: 500;
-}
-.feature{
-    color: #ff900e;
-    font-weight: 700 ;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -113,17 +188,21 @@ main{
   }
 
   nav,
-  .features-container
+  .features-container,
+  .facts-card-container,
+  .sponsor-img-container
   {
     flex-direction: column;
   }
-  .teams-img-container{
+  .teams-img-container {
     grid-template-columns: 1fr;
   }
-  .features-content{
-    padding-left: 20px;
-    padding-right: 20px;
-}
+  .features-content,
+  .facts-card-container
+  {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 /* rab and medium devices */
@@ -133,11 +212,12 @@ main{
     padding: 40px;
   }
   nav,
-  .features-container
-  {
+  .features-container {
     flex-direction: column;
   }
-  .features-container{
-    
+  .features-container,
+  .facts-card-container
+   {
+    padding: 20px;
   }
 }
